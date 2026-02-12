@@ -15,6 +15,13 @@ return {
 			desc = "Explorer NeoTree (Root Dir)",
 		},
 		{
+			"<leader>ff",
+			function()
+				require("neo-tree.command").execute({ action = "focus" })
+			end,
+			desc = "Explorer NeoTree (Root Dir)",
+		},
+		{
 			"<leader>ge",
 			function()
 				require("neo-tree.command").execute({ source = "git_status", toggle = true })

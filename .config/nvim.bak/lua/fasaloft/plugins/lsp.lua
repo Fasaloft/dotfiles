@@ -71,6 +71,19 @@ return {
 			function(server_name)
 				lspconfig[server_name].setup({ capabilities = capabilities })
 			end,
+			["cssls"] = function()
+				lspconfig["svelte"].setup({
+					capabilities = capabilities,
+					settings = {
+						css = {
+							validate = true,
+							lint = {
+								unknownAtRules = "ignore",
+							},
+						},
+					},
+				})
+			end,
 			["svelte"] = function()
 				lspconfig["svelte"].setup({
 					capabilities = capabilities,
