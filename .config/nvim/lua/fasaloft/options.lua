@@ -11,6 +11,9 @@ vim.o.wrap = false
 vim.o.smartindent = true
 
 vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
+  command = "silent! checktime",
+})
 vim.o.swapfile = false
 vim.o.smartcase = true
 vim.o.signcolumn = "yes"
@@ -28,6 +31,7 @@ vim.o.softtabstop = 2
 
 -- UI
 vim.o.winborder = "rounded"
+vim.diagnostic.config({ virtual_text = true })
 
 -- Filetype
 vim.api.nvim_create_autocmd("FileType", {
@@ -39,7 +43,9 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 -- Mapping
-vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>lf", function()
+  require("conform").format({ timeout_ms = 2000, lsp_format = "fallback" })
+end)
 
 vim.keymap.set("n", "<leader>sv", ":vsplit<CR>")
 
