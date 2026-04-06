@@ -1,3 +1,10 @@
+# OPENSPEC:START
+# OpenSpec shell completions configuration
+fpath=("/Users/wehrenberg/.oh-my-zsh/custom/completions" $fpath)
+autoload -Uz compinit
+compinit
+# OPENSPEC:END
+
 eval "$(starship init zsh)"
 
 autoload -Uz compinit 
@@ -31,11 +38,23 @@ function aws_prof {
   echo -n "%{$fg_bold[blue]%}aws:(%{$fg[cyan]%}${profile}%{$fg_bold[blue]%})%{$reset_color%} "
 }
 
-source /opt/homebrew/opt/asdf/libexec/asdf.sh
 eval "$(direnv hook zsh)"
-export PATH=$PATH:~/.asdf/shims
 
 
 export PNPM_HOME="$HOME/.pnpm"
 export PATH="$PNPM_HOME:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+eval "$(mise activate zsh)"
+(vertice-bootstrap >/dev/null &)
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/wehrenberg/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# bun completions
+[ -s "/Users/wehrenberg/.bun/_bun" ] && source "/Users/wehrenberg/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"

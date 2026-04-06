@@ -5,7 +5,7 @@ vim.pack.add({ "https://github.com/rose-pine/neovim" })
 vim.pack.add({ "https://github.com/mason-org/mason.nvim" })
 vim.pack.add({ "https://github.com/Saghen/blink.cmp" })
 
--- FILE EXPLORER 
+-- FILE EXPLORER
 vim.pack.add({ "https://github.com/stevearc/oil.nvim" })
 
 -- FILE FINDER
@@ -28,5 +28,3 @@ vim.pack.add({ "https://github.com/kdheepak/lazygit.nvim" })
 vim.pack.add({ "https://github.com/nvim-lua/plenary.nvim" })
 vim.pack.add({ "https://github.com/ThePrimeagen/git-worktree.nvim" })
 vim.pack.add({ "https://github.com/lewis6991/gitsigns.nvim" })
-
-

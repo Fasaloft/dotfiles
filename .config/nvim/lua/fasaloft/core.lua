@@ -58,8 +58,8 @@ require("lualine").setup({
     lualine_a = { { "mode", color = { fg = palette.muted, bg = "NONE" } } },
     lualine_b = { { worktree_name, color = { fg = palette.pine, bg = "NONE" } } },
     lualine_c = { { "branch", color = { fg = palette.foam, bg = "NONE" } } },
-    lualine_x = { },
-    lualine_y = { },
+    lualine_x = {},
+    lualine_y = {},
     lualine_z = { { "filename", color = { fg = palette.text, bg = "NONE" } } },
   },
 })
@@ -100,4 +100,3 @@ vim.api.nvim_create_autocmd("FileType", {
     pcall(vim.treesitter.start)
   end,
 })
-

@@ -36,6 +36,10 @@
       "rev": "cf2a288696b03d0934da713d66c6d71557b5c997",
       "src": "https://github.com/rose-pine/neovim"
     },
+    "nvim-claude-lsp": {
+      "rev": "393fcf45f816eb150a217e8d8da666c7b166b292",
+      "src": "https://github.com/kezhenxu94/nvim-claude-lsp"
+    },
     "nvim-lspconfig": {
       "rev": "41ceb6bba3a40128b7841f5b7f5a9dae7201e823",
       "src": "https://github.com/neovim/nvim-lspconfig"
